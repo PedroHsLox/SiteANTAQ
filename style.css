@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  /* display: flex; */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.icon-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.teste{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.icon-label {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  white-space: nowrap;
+}
+
+.underline {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: yellow;
+  margin: 5px 0 0 0;
+}
+.timeline-line {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  height: 10px;
+  background: linear-gradient(to right, #162417 0%, #D1D5DB 0%);
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: background 0.3s ease; /* Smooth transition */
+}
+.timeline-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.timeline-item .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-bottom: 8px;
+}
+
+.timeline-item .circle.completed {
+  background-color: green;
+}
+
+.timeline-item .circle.in-progress {
+  background-color: orange;
+}
+
+.timeline-item .circle.upcoming {
+  background-color: #bbb;
+}
+
+.date {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+}
+/*Put the legend at the center of the page*/
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.legend .circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.legend .completed {
+  background-color: green;
+}
+
+.legend .in-progress {
+  background-color: orange;
+}
+
+.legend .upcoming {
+  background-color: #bbb;
+}
+
